@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import logo from '../logo.png';
 import { Link } from 'react-router-dom';
 import { GiHamburgerMenu } from 'react-icons/gi';
+import { AiFillHome, AiFillInfoCircle, AiOutlineMail } from 'react-icons/ai';
 
 const Navbar = ({ show }) => {
     const [showNav, setShowNav] = useState(false);
@@ -18,15 +19,6 @@ const Navbar = ({ show }) => {
                         backgroundColor: '#011627',
                     }}
                 >
-                    <li>
-                        <Link to='/'>A</Link>
-                    </li>
-                    <li>
-                        <Link to='/about'>B</Link>
-                    </li>
-                    <li>
-                        <Link to='/contact'>C</Link>
-                    </li>
                     <li
                         style={{
                             display: 'flex',
@@ -45,13 +37,49 @@ const Navbar = ({ show }) => {
                 </ul>
                 <ul>
                     <li>
-                        <Link to='/'> Home</Link>
+                        <Link
+                            to='/'
+                            style={{
+                                display: 'flex',
+                                flexDirection: 'row',
+                                alignItems: 'center',
+                            }}
+                        >
+                            <AiFillHome size={20} style={{ marginRight: 20 }} />{' '}
+                            Home
+                        </Link>
                     </li>
                     <li>
-                        <Link to='/about'>About</Link>
+                        <Link
+                            to='/about'
+                            style={{
+                                display: 'flex',
+                                flexDirection: 'row',
+                                alignItems: 'center',
+                            }}
+                        >
+                            <AiFillInfoCircle
+                                size={20}
+                                style={{ marginRight: 20 }}
+                            />{' '}
+                            About
+                        </Link>
                     </li>
                     <li>
-                        <Link to='/contact'>Contact Us</Link>
+                        <Link
+                            to='/contact'
+                            style={{
+                                display: 'flex',
+                                flexDirection: 'row',
+                                alignItems: 'center',
+                            }}
+                        >
+                            <AiOutlineMail
+                                size={20}
+                                style={{ marginRight: 20 }}
+                            />{' '}
+                            Contact Us
+                        </Link>
                     </li>
                 </ul>
             </div>

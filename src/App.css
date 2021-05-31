@@ -41,8 +41,7 @@ header {
 }
 
 .sidenav.active {
-    left: 0;
-    width: 50px;
+    width: 40px;
     overflow: hidden;
     word-break: keep-all;
 }
@@ -53,7 +52,7 @@ ul {
 
 ul li {
     list-style-type: none;
-    margin: 10px;
+    /* margin: 10px; */
 }
 
 .logo {
@@ -65,7 +64,7 @@ ul li a {
     text-decoration: none;
     font-size: 16px;
     display: block;
-    padding: 10px 15px;
+    padding: 10px 0px;
     border-radius: 6px;
     word-break: keep-all;
     white-space: nowrap;
@@ -89,4 +88,5 @@ header svg {
     align-items: center;
     font-size: 40px;
     color: black;
+    position: relative;
 }
