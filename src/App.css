@@ -15,12 +15,13 @@ header {
 }
 
 .sidenav {
-    width: 200px;
+    width: 150px;
     background-color: #011627;
     position: fixed;
+    z-index: 10;
     /* left: ; */
     height: 100%;
-    padding: 0 10px;
+    /* padding: 0 10px; */
     transition: all 0.7s;
     overflow: hidden;
     word-break: keep-all;
@@ -28,7 +29,7 @@ header {
 
 @media only screen and (max-width: 600px) {
     .sidenav {
-        width: 200px;
+        width: 150px;
         background-color: #011627;
         position: fixed;
         /* left: -10%; */
@@ -65,16 +66,22 @@ ul li a {
     font-size: 16px;
     display: block;
     padding: 10px 0px;
-    border-radius: 6px;
+    margin: 0;
+    border-radius: 6px 0px 0px 6px;
     word-break: keep-all;
     white-space: nowrap;
+    width: calc(100% - 10px);
+    /* margin: 0px 10px; */
 }
 
 ul li a:hover,
-ul li a:active {
+ul li:active a {
     background-color: #172b4d;
     word-break: keep-all;
     white-space: nowrap;
+    width: calc(100% - 10px);
+    border-right: 3px solid yellow;
+    /* margin: 0px 10px; */
 }
 
 header svg {
@@ -82,11 +89,12 @@ header svg {
 }
 
 .main {
-    height: 90vh;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 40px;
     color: black;
-    position: relative;
+    background-color: yellow;
+    /* width: calc(100% - 220px); */
 }

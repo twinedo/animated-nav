@@ -4,10 +4,11 @@ import { Link } from 'react-router-dom';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { AiFillHome, AiFillInfoCircle, AiOutlineMail } from 'react-icons/ai';
 
-const Navbar = ({ show }) => {
-    const [showNav, setShowNav] = useState(false);
+const Navbar = ({ show, setShowNav }) => {
+    // const [showNav, setShowNav] = useState(false);
+    const [selectedTab, setSelectedTab] = useState('home');
     return (
-        <div className={showNav ? 'sidenav active' : 'sidenav'}>
+        <div className={show ? 'sidenav active' : 'sidenav'}>
             {/* <img src={logo} alt='logo.png' className='logo' /> */}
             <div style={{ display: 'flex', flexDirection: 'row' }}>
                 <ul
@@ -31,7 +32,7 @@ const Navbar = ({ show }) => {
                     >
                         <GiHamburgerMenu
                             size={24}
-                            onClick={() => setShowNav(!showNav)}
+                            onClick={() => setShowNav(!show)}
                         />
                     </li>
                 </ul>
@@ -43,9 +44,14 @@ const Navbar = ({ show }) => {
                                 display: 'flex',
                                 flexDirection: 'row',
                                 alignItems: 'center',
+                                padding: '10px 10px',
+                                borderRight:
+                                    selectedTab === 'home'
+                                        ? '1px solid red'
+                                        : null,
                             }}
                         >
-                            <AiFillHome size={20} style={{ marginRight: 20 }} />{' '}
+                            <AiFillHome size={20} style={{ marginRight: 20 }} />
                             Home
                         </Link>
                     </li>
@@ -56,12 +62,17 @@ const Navbar = ({ show }) => {
                                 display: 'flex',
                                 flexDirection: 'row',
                                 alignItems: 'center',
+                                padding: '10px 10px',
+                                borderRight:
+                                    selectedTab === 'about'
+                                        ? '1px solid red'
+                                        : null,
                             }}
                         >
                             <AiFillInfoCircle
                                 size={20}
                                 style={{ marginRight: 20 }}
-                            />{' '}
+                            />
                             About
                         </Link>
                     </li>
@@ -72,12 +83,17 @@ const Navbar = ({ show }) => {
                                 display: 'flex',
                                 flexDirection: 'row',
                                 alignItems: 'center',
+                                padding: '10px 10px',
+                                borderRight:
+                                    selectedTab === 'contact'
+                                        ? '1px solid red'
+                                        : null,
                             }}
                         >
                             <AiOutlineMail
                                 size={20}
                                 style={{ marginRight: 20 }}
-                            />{' '}
+                            />
                             Contact Us
                         </Link>
                     </li>

@@ -1,0 +1,24 @@
+.container-home {
+    display: flex;
+    /* flex: 1; */
+    /* margin: 150px; */
+    background: red;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.7s;
+    margin-left: 150px;
+    /* width: 100%; */
+}
+
+.container-home.active {
+    display: flex;
+    /* flex: 1; */
+    margin-left: 70px;
+    background: red;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.7s;
+    /* width: 100%; */
+
+    /* width: calc(100vw - 220px); */
+}
